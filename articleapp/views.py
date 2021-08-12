@@ -64,7 +64,7 @@ class ArticleListView(ListView):
     model = Article
     context_object_name = 'article_list'
     template_name = 'articleapp/list.html'
-    paginate_by = 1   # 잠깐 1로 바꿔놓음
+    paginate_by = 20   # 잠깐 1로 바꿔놓음
 
 
 
