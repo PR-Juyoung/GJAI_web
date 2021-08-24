@@ -14,7 +14,7 @@
                 Projects
             </a>
         </span>
-        {% if not user.is_authenticated %}
+        {% if user.is_authenticated %}
         <span>
             <a href="{% url 'subscribeapp:list' %}">
                 Subscription
