@@ -14,7 +14,7 @@ class Article(models.Model):
     project = models.ForeignKey(Project,
                                 on_delete=models.SET_NULL,
                                 related_name='article',
-                                null=True)
+                                null=True, blank=True)  # null은 DB안에서~, blank는 게시글에 내용을 작성하지 않아도~
 
     title = models.CharField(max_length=200, null=True)
     image = models.ImageField(upload_to='article/', null=True)
