@@ -85,3 +85,8 @@ __pycache__/
 media/
 
 staticfiles/
+
+GJ_AI_school.pem
+
+../GJAI_web_2/gis_5ban_gcp
+../GJAI_web_2/gis_5ban_gcp.pub
