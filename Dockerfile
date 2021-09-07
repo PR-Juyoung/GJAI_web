@@ -2,6 +2,8 @@ FROM python:3.9.0
 
 WORKDIR /home/
 
+RUN echo 'asdf'
+
 RUN git clone https://github.com/PR-Juyoung/GJAI_web_tea.git
 
 WORKDIR /home/GJAI_web_tea/
