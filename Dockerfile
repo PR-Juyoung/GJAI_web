@@ -2,7 +2,7 @@ FROM python:3.9.0
 
 WORKDIR /home/
 
-RUN echo 'asdfghjkl'
+RUN echo 'asdfghjklqwer'
 
 RUN git clone https://github.com/PR-Juyoung/GJAI_web_tea.git
 
