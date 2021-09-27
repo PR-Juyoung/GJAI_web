@@ -14,12 +14,26 @@ services:
       - gis_5ban_media:/data/media/
 
   django:
-    image: gis_5ban_django:3
+    image: gis_5ban_django:4
     networks:
       - gis_5ban_network
     volumes:
       - gis_5ban_static://home/GJAI_web_tea/staticfiles/
       - gis_5ban_media://home/GJAI_web_tea/media/
+    secrets:
+      - DJANGO_SECRET_KEY
+
+  mariadb:
+    image: mariadb:10.5
+    networks:
+      - gis_5ban_network
+    volumes:
+      - gis_mariadb:/var/lib/mysql
+    environment:
+      MARIADB_ROOT_PASSWORD: 1q2w3e4r!
+      MARIADB_DATABASE: django
+      MARIADB_USER: django
+      MARIADB_PASSWORD: 1q2w3e4r!
 
 
 networks:
@@ -28,3 +42,8 @@ networks:
 volumes:
   gis_5ban_static:
   gis_5ban_media:
+  gis_mariadb:
+
+secrets:
+  DJANGO_SECRET_KEY:
+    external: true
