@@ -18,8 +18,8 @@ services:
     networks:
       - gis_5ban_network
     volumes:
-      - gis_5ban_static://home/GJAI_web_tea/staticfiles/
-      - gis_5ban_media://home/GJAI_web_tea/media/
+      - gis_5ban_static:/home/GJAI_web_tea/staticfiles/
+      - gis_5ban_media:/home/GJAI_web_tea/media/
     secrets:
       - DJANGO_SECRET_KEY
 
