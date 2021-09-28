@@ -3,7 +3,7 @@ from .base import *
 def read_secret(secret_name):
     file = open('/run/secrets/' + secret_name)
     secret = file.read()
-    secret = secret.lstrip().rsplit()  # 좌우 공백제거
+    secret = secret.lstrip().rstrip()
     file.close()
     return secret
 
